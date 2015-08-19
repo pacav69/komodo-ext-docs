@@ -36,6 +36,6 @@ Mac OS X
 
 <code>
 
-    <em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
+    \<em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
 
 </code>
