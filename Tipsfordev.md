@@ -1,18 +1,19 @@
 # Tips for development
 
-## prefs.xml 
+## prefs.xml
 
 If using code to modify prefs.xml file make a back up before proceding
 
 location on a mac in this directory
 /Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<Version>
 
-e.g.
+example:
+
 /Users/admin/Library/Application Support/KomodoIDE/9.2
 
 // TODO: locations on linux windows
 
-## extensions installed location
+## Extensions installed location
 /Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<Version>/XRE/extensions
 
 
@@ -29,9 +30,12 @@ Linux
 Mac OS X
 /Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<version>
 
-## Extension icon 
+## Extension icon
 
-* appears in komodos add-ons list, size is 48px * 48px, located in install.rdf file
+* appears in Komodo add-ons list, size is 48px * 48px, located in install.rdf file
 
-<em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
+<code>
 
+    <em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
+
+</code>
