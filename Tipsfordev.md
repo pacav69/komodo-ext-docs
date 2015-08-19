@@ -4,19 +4,19 @@
 
 If using code to modify prefs.xml file make a back up before proceding
 
-location on a mac
-/Users/{username}/Library/Application Support/{KomodoIDE}|{KomodoEDIT}/{Version number}
+location on a mac in this directory
+/Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<Version>
 
 e.g.
 /Users/admin/Library/Application Support/KomodoIDE/9.2
 
 // TODO: locations on linux windows
 
-## extensions installes location
-/Users/silvermac/Library/Application Support/KomodoIDE/9.2/XRE/extensions
+## extensions installed location
+/Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<Version>/XRE/extensions
 
 
-Where does Komodo keep settings data?
+## Where does Komodo keep settings data?
 
 Komodo stores preferences, macros, templates, keybinding schemes and other settings in a user-specific directory called the user data directory. The name and location of this directory varies depending on the operating system and Komodo version:
 
@@ -28,3 +28,10 @@ Linux
 /home/<user>/.komodo[ide|edit]/<version>
 Mac OS X
 /Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<version>
+
+## Extension icon 
+
+* appears in komodos add-ons list, size is 48px * 48px, located in install.rdf file
+
+<em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
+
