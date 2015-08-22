@@ -15,3 +15,10 @@ Compatable with Komodo v9.*
 
 ## Videos
 [Build Production Ready Javascript Apps With Grunt](https://www.youtube.com/watch?v=BpMKxF-HUqA)
+
+http://www.seamonkey-project.org/
+chrome://komodo/content/dialogs/browser.xul
+
+https://www.mozilla.org/en-US/firefox/developer/
+
+https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/

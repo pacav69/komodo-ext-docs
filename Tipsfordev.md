@@ -39,3 +39,23 @@ Mac OS X
     \<em:iconURL>chrome://extensionname/skin/images/icon48.png</em:iconURL>
 
 </code>
+
+
+Use error catching in javascript
+
+http://www.w3schools.com/js/js_errors.asp
+
+http://www.journaldev.com/1696/java-exception-handling-tutorial-with-examples-and-best-practices
+
+http://javascript.info/tutorial/exceptions
+
+http://www.sitepoint.com/exceptional-exception-handling-in-javascript/
+
+http://www.devshed.com/c/a/JavaScript/JavaScript-Exception-Handling/
+
+
+http://downloads.activestate.com/Komodo/releases/8.5.4/
+
+
+
+
