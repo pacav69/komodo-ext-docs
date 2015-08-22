@@ -56,6 +56,13 @@ http://www.devshed.com/c/a/JavaScript/JavaScript-Exception-Handling/
 
 http://downloads.activestate.com/Komodo/releases/8.5.4/
 
+location of schemes
+/Users/silvermac/Library/Application Support/KomodoIDE/9.2/schemes
+
+location of extensions
+/Users/silvermac/Library/Application Support/KomodoIDE/9.2/XRE/extensions
+
+
 
 
 
