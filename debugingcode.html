@@ -1,3 +1,5 @@
+ <!DOCTYPE html>
+<html lang="en-us">
  <head>
     <meta charset="UTF-8">
     <title>Komodo-ext-docs - Debugging PHP </title>
@@ -52,7 +54,7 @@ On a MAC using MAMP
 	<li>open up this file with your favourite text editor</li>
 	<li>do a search for xdebug you should find something like this:</li>
 </ul>
-<pre>
+<pre><code>
 ;[XDebug]
 ;; Only Zend OR (!) XDebug
 ;zend_extension=&quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&quot;
@@ -62,14 +64,14 @@ On a MAC using MAMP
 ;xdebug.remote_handler=dbgp
 ;xdebug.profiler_enable=1
 ;xdebug.profiler_output_dir=/tmp        
-</pre>
+</pre></code>
 
 <div>
 Delete the semicolon ; in front of the text under &apos;;; Only Zend OR (!) XDebug&apos; so it reads like this:
 
 </div>
 
-<pre>
+<pre><code>
 ;[XDebug]
 ;; Only Zend OR (!) XDebug
 zend_extension=&amp;quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&amp;quot;
@@ -79,7 +81,7 @@ xdebug.remote_port=9000
 xdebug.remote_handler=dbgp
 xdebug.profiler_enable=1
 xdebug.profiler_output_dir=/tmp
-</pre>
+</pre></code>
 
 
 <div>
