@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Komodo-ext-docs - Debugging PHP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+	</head>
+	<body>
+		<div id=wrapper>
+			<h2>Installation</h2>
+
+			<p>WIP</p>
+			
+<h2>Download and install Komodo IDE</h2>
+
+			<p>Download and install Komodo IDE</p>
+			
+<h2>Create a project</h2>
+
+			<p>Open up Komodo and create a project in your installed MAMP</p>
+			<p>located on a MAC '/applications/joomla-3.4.3-1/apps/joomla' this will display all files in the left side panel of the IDE.</p>
+			<p>This will allow you to directly edit and debug your code.</p>
+			
+<h2>Configure IDE for debugging</h2>
+
+			
+<h3>Modifying the php.ini file</h3>
+
+			<p>In order to use the debugger you need to modify the php.ini file of the Apache server you are using.
+				<br>Follow these instructions</p>
+			<p>
+				<a href="https://github.com/pacav69/komodo-ext-docs/blob/master/img/komododebbugingsetup.png" target="_blank">
+					<img src="https://github.com/pacav69/komodo-ext-docs/blob/master/img/komododebbugingsetup.png" alt="Setup for debugging" style="max-width:100%;">
+				</a>
+			</p>
+			<p>On a MAC using MAMP</p>
+			<ul>
+				<li>Goto /applications/joomla-3.4.3-1/php/etc/php.ini</li>
+				<li>open up this file with your favourite text editor</li>
+				<li>
+					<p>do a search for xdebug you should find something like this:</p>
+<pre><code>;[XDebug]
+;; Only Zend OR (!) XDebug
+;zend_extension=&amp;quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&amp;quot;
+;xdebug.remote_enable=true
+;xdebug.remote_host=127.0.0.1
+;xdebug.remote_port=9000
+;xdebug.remote_handler=dbgp
+;xdebug.profiler_enable=1
+;xdebug.profiler_output_dir=/tmp
+</code></pre>
+
+				</li>
+			</ul>
+			<p>Delete the ; in front of the text under ';; Only Zend OR (!) XDebug' so it reads like this:</p>
+<pre><code>    ;[XDebug]
+    ;; Only Zend OR (!) XDebug
+    zend_extension=&amp;quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&amp;quot;
+    xdebug.remote_enable=true
+    xdebug.remote_host=127.0.0.1
+    xdebug.remote_port=9000
+    xdebug.remote_handler=dbgp
+    xdebug.profiler_enable=1
+    xdebug.profiler_output_dir=/tmp
+</code></pre>
+
+			<p>Then do a search for implicit_flush you will find</p>
+<pre><code>    implicit_flush = Off
+</code></pre>
+
+			<p>Change the Off to On</p>
+<pre><code>    implicit_flush = On
+</code></pre>
+
+			<p>Save your changes</p>
+			<p>Restart your apache server</p>
+			<p>###In the IDE###
+				<br>Open up preferences select--&gt; languages --&gt;PHP</p>
+			<p>####Default php interpreter####
+				<br>
+				<a href="img/Komododebbugingsetup.png" target="_blank">
+					<img src="img/Komododebbugingsetup.png" alt="" width="600" height="508" style="max-width:100%;">
+				</a>
+			</p>
+			<p>Under the label ''''Default php interpreter'''' use the following:</p>
+			<ul>
+				<li>
+					<p>goto ''''Use this interpreter'''' browse to
+						<br>/applications/joomla-3.4.3-1/php/bin/php</p>
+				</li>
+				<li>
+					<p>Under the label ''''Default composer interpreter'''' browse to
+						<br>/applications/joomla-3.4.3-1/php/bin/php</p>
+				</li>
+				<li>
+					<p>Under the label ''''Path to alternative PHP configuration file'''' browse to
+						<br>/applications/joomla-3.4.3-1/php/etc/php.ini</p>
+				</li>
+			</ul>
+			<p>####Listen for debugging####
+				<br>Then select in preferences --&gt;Debugger--&gt;Connection</p>
+			<p></p>
+			<h4>Debugger Connection</h4>
+			<h4></h4>
+			<p></p>
+			<p>
+				<a href="https://github.com/pacav69/komodo-ext-docs/img/Komododebuggingconnection.png%7C" target="_blank">
+					<img src="https://github.com/pacav69/komodo-ext-docs/img/Komododebuggingconnection.png%7C" alt="Setup for debugging" style="max-width:100%;">
+				</a>
+			</p>
+			<p>Under ''''Komodo should listen for debugging connections on:''''
+				<br>Change option to 'a specific port:9000'
+				<br>make sure it is set to 9000 this is what should be set in the php.ini file.</p>
+			<p>Open up preferences select--&gt; languages --&gt;PHP
+				<br>Under the debugger Configuration you should see ''''Successfully configured for local PHP debugging.'''' If not you can click on 'Re-check Config'</p>
+			<p>Click OK to save changes</p>
+			<p></p>
+			<h4>Debugging options</h4>
+			<h4>
+<br>
+<a href="https://github.com/pacav69/komodo-ext-docs/img/KomodoDebuggingoptions.png%7C" target="_blank"><img src="https://github.com/pacav69/komodo-ext-docs/img/KomodoDebuggingoptions.png%7C" alt="Setup for debugging" style="max-width:100%;"></a>
+</h4>
+			<p></p>
+			<p>Under the debug menu select 'Step In' this will open up a new window titled ''''Debugging Options''''.
+				<br>Create a new configuration name it ''''joomlaphp'''' click ok</p>
+			<ul>
+				<li>
+					<p>In '''Language''' enter in PHP</p>
+				</li>
+				<li>
+					<p>In '''Interpreter Arguments''' click on the arrow to the right of the area
+						<br>select ''''look for php.ini file in this directory''''.
+						<br>browse to /Applications/joomla-3.4.3-1/php/etc
+						<br>it will then display '-c /Applications/joomla-3.4.3-1/php/etc'</p>
+				</li>
+				<li>
+					<p>In '''Script''' browse to
+						<br>/Applications/joomla-3.4.3-1/apps/joomla/htdocs/index.php</p>
+				</li>
+				<li>
+					<p>In '''Directory''' browse to
+						<br>/Applications/joomla-3.4.3-1/apps/joomla/htdocs</p>
+				</li>
+			</ul>
+			<p>Under the label ''''Select the interpreter to use for debugging select option'''' - ''''Use the CGI interpreter (php-cgi or php)''''.</p>
+			<p>When ok is click it will start to run and open up the index.php and stop at the first entry point.
+				<br>From there you can go/continue, step in, step over, and step out.</p>
+			<p>If go/continue is selected it will goto the first breakpoint in your code if you have created one.</p>
+		</div>
+	</body>
+
+</html>

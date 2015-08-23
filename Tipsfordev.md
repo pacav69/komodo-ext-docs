@@ -64,6 +64,8 @@ location of extensions
 
 use html tools for html editing
 
+https://stackedit.io
+
 
 
 

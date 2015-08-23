@@ -1,0 +1,76 @@
+<h1 id="rootcontent">root/content</h1>
+<h2 id="komodooverlay.xul">komodoOverlay.xul</h2>
+<p>contains list of menu selections</p>
+<p><code></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>Location of language file used with xul</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;!DOCTYPE overlay SYSTEM &quot;chrome://jphpext/locale/jphpextgen.dtd&quot;&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>location of stylesheets</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;?xml-stylesheet href=&quot;chrome://createjphpextproject/skin/komodoOverlay.css&quot; type=&quot;text/css&quot; ?&gt;
+&lt;?xml-stylesheet href=&quot;chrome://createjphpextproject/skin/hyperlink/cssImagePreview.css&quot; type=&quot;text/css&quot; ?&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>overlay id</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;overlay id=&quot;createjphpextproject&quot; xmlns=&quot;http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul&quot;&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>scripts used in xul</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;script type=&quot;application/x-javascript;version=1.7&quot; src=&quot;chrome://komodo/content/library/encodingmenu.js&quot; /&gt;
+&lt;script type=&quot;application/x-javascript&quot;             src=&quot;chrome://jphpextgen/content/createJPHPExtProject.js&quot; /&gt;
+&lt;script type=&quot;application/x-javascript&quot;             src=&quot;chrome://jphpextgen/content/scripts/statusbar.js&quot; /&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>menubar</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;menubar id=&quot;menubar_main&quot;&gt;</code></pre>
+<p></code></p>
+<ul>
+<li>inserts menu after helpmenu</li>
+</ul>
+<p><code></p>
+<pre><code>    &lt;menu id=&quot;jphptools&quot; label=&quot;JPHP Tools&quot; insertafter=&quot;helpMenu&quot;&gt;
+        &lt;menupopup&gt;
+        </code></pre>
+<p></code></p>
+<ul>
+<li>first menu item about</li>
+</ul>
+<p><code></p>
+<pre><code>                &lt;menuitem id=&quot;info&quot; label=&quot;About JPHP Tools …&quot;     oncommand=&quot;window.openDialog(&#39;chrome://jphpextgen/content/info/info.xul&#39;,&#39;Info&#39;,&#39;chrome,centerscreen,modal&#39;);&quot;
+                    class=&quot;menuitem-iconic&quot; image=&quot;chrome://jphpextgen/content/skin/classic/images/information.png&quot;/&gt;
+                &lt;menuseparator /&gt;
+                &lt;menuitem id=&quot;createJPHPExtProject&quot;
+                        label=&quot;Create Joomla Extension Project&quot;
+                        oncommand=&quot;ko.jphpextgen.createExtGenProject(&#39;jphp&#39;);&quot;
+                        class=&quot;menuitem-iconic&quot;/&gt;
+                &lt;menuseparator /&gt;
+                &lt;menuitem id=&quot;modifyJPHPExtPrefs&quot;
+                        label=&quot;Modify Joomla Extension Prefs&quot;
+                        oncommand=&quot;window.openDialog(&#39;chrome://jphpextgen/content/pref/jextprefs.xul&#39;,&#39;Info&#39;,&#39;chrome,centerscreen,modal&#39;);&quot;
+                        class=&quot;menuitem-iconic&quot;/&gt;
+                &lt;menuseparator /&gt;
+            &lt;/menupopup&gt;
+        &lt;/menu&gt;
+    &lt;/menubar&gt;
+&lt;/overlay&gt;
+             </code></pre>
+<p></code></p>
+<ul>
+<li>draws a line on the menu list</li>
+</ul>
+<p><code></p>
+<pre><code>&lt;menuseparator /&gt;</code></pre>
+<p></code></p>

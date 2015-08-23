@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Komodo Overlay XUL</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+		<!--<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />-->
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+	</head>
+	<body>
+		<section class="page-header">
+			<div class="container">
+				<h2 id="komodo-overlay-xul">Komodo Overlay XUL</h2>
+
+		</section>
+		<section class="main-content">
+			
+<h1 id="files-in-root">Files in root</h1>
+
+			
+<h2 id="conventions-used">Conventions used</h2>
+
+			<p>Anything within curly brackets {} including the {} is required to be replaced.</p>
+			
+<h2 id="rootcontent">root/content</h2>
+
+			
+<h3 id="komodooverlayxul">komodoOverlay.xul</h3>
+
+			<p>contains list of menu selections</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+</code></pre>
+
+			<ul>
+				<li>Location of language file used with xul</li>
+			</ul>
+			<p><code></code>
+			</p>
+<pre><code>&lt;!DOCTYPE overlay SYSTEM  "chrome://{extension_name}/locale/{extlanguagefile}.dtd"&gt;
+</code></pre>
+
+			<p></p>
+			<ul>
+				<li>location of stylesheets</li>
+			</ul>
+<pre><code>&lt;?xml-stylesheet href="chrome://{extension_name}/skin/komodoOverlay.css" type="text/css" ?&gt;
+&lt;?xml-stylesheet href="chrome://{extension_name}/skin/hyperlink/cssImagePreview.css" type="text/css" ?&gt;
+</code></pre>
+
+			<p></p>
+			<ul>
+				<li>overlay id</li>
+			</ul>
+<pre><code>&lt;overlay id="{extension_name}" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</code></pre>
+
+			<ul>
+				<li>scripts used in xul</li>
+			</ul>
+<pre><code>&lt;script type="application/x-javascript;version=1.7" src="chrome://komodo/content/library/encodingmenu.js" /&gt;
+&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/{extension_nameExtProject.js" /&gt;
+&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/scripts/statusbar.js" /&gt;
+</code></pre>
+
+			<ul>
+				<li>menubar</li>
+			</ul>
+<pre><code>&lt;menubar id="menubar_main"&gt;
+</code></pre>
+
+			<ul>
+				<li>inserts menu after helpmenu</li>
+			</ul>
+<pre><code>    &lt;menu id="{MENuNAME}" label="{MENU_TITLE}" insertafter="helpMenu"&gt;
+        &lt;menupopup&gt;
+</code></pre>
+
+			<ul>
+				<li>first menu item about</li>
+			</ul>
+<pre><code>    &lt;menuitem id="info" label="About {extension_name} Tools …"     oncommand="window.openDialog('chrome://{extension_name}/content/info/info.xul','Info','chrome,centerscreen,modal');"
+                    class="menuitem-iconic" image="chrome://{extension_name}/content/skin/classic/images/information.png"/&gt;
+                &lt;menuseparator /&gt;
+                &lt;menuitem id="create{extension_name}Project"
+                        label="Create {extension_name} Extension Project"
+                        oncommand="ko.{extension_name}.createExtGenProject('{projectbuild}');"
+                        class="menuitem-iconic"/&gt;
+                &lt;menuseparator /&gt;
+                &lt;menuitem id="modifyExtPrefs"
+                        label="Modify {extension_name} Extension Prefs"
+                        oncommand="window.openDialog('chrome://{extension_name}/content/pref/extprefs.xul','Info','chrome,centerscreen,modal');"
+                        class="menuitem-iconic"/&gt;
+                &lt;menuseparator /&gt;
+            &lt;/menupopup&gt;
+        &lt;/menu&gt;
+    &lt;/menubar&gt;
+&lt;/overlay&gt;
+</code></pre>
+
+			<ul>
+				<li>draws a line on the menu list</li>
+			</ul>
+<pre><code>&lt;menuseparator /&gt;
+</code></pre>
+
+		</section>
+	</body>
+
+</html>
