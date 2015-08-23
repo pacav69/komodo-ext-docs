@@ -20,7 +20,7 @@ This will allow you to directly edit and debug your code.
 In order to use the debugger you need to modify the php.ini file of the Apache server you are using.
 Follow these instructions
 
-![Setup for debugging](https://github.com/pacav69/komodo-ext-docs/img/komododebbugingsetup.png)
+![Setup for debugging](https://github.com/pacav69/komodo-ext-docs/blob/master/img/komododebbugingsetup.png)
 
 On a MAC using MAMP
 * Goto /applications/joomla-3.4.3-1/php/etc/php.ini
