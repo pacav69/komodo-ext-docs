@@ -9,7 +9,7 @@ Download and install Komodo IDE
 
 Open up Komodo and create a project in your installed MAMP
 
-located on a MAC '/applications/joomla-3.4.3-1/apps/joomla' this will display all files in the left side panel of the IDE.
+located on a MAC &apos;/applications/joomla-3.4.3-1/apps/joomla&apos; this will display all files in the left side panel of the IDE.
 
 This will allow you to directly edit and debug your code.
 
@@ -29,7 +29,7 @@ On a MAC using MAMP
 
         ;[XDebug]
         ;; Only Zend OR (!) XDebug
-        ;zend_extension="/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so"
+        ;zend_extension=&quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&quot;
         ;xdebug.remote_enable=true
         ;xdebug.remote_host=127.0.0.1
         ;xdebug.remote_port=9000
@@ -37,11 +37,11 @@ On a MAC using MAMP
         ;xdebug.profiler_enable=1
         ;xdebug.profiler_output_dir=/tmp
 
-Delete the ; in front of the text under ';; Only Zend OR (!) XDebug' so it reads like this:
+Delete the ; in front of the text under &apos;;; Only Zend OR (!) XDebug&apos; so it reads like this:
 
         ;[XDebug]
         ;; Only Zend OR (!) XDebug
-        zend_extension="/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so"
+        zend_extension=&quot;/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so&quot;
         xdebug.remote_enable=true
         xdebug.remote_host=127.0.0.1
         xdebug.remote_port=9000
@@ -64,58 +64,57 @@ Save your changes
 Restart your apache server
 
 ###In the IDE###
-Open up preferences select--> languages -->PHP
+Open up preferences select--&gt; languages --&gt;PHP
 
 ####Default php interpreter####
+<img src="img/Komododebbugingsetup.png" alt="" width="400" height="508">
 
-![Setup for debugging](https://github.com/pacav69/komodo-ext-docs/img/komododebbugingsetup.png)
-
-Under the label ''''Default php interpreter'''' use the following:
-* goto ''''Use this interpreter'''' browse to
+Under the label &apos;&apos;&apos;&apos;Default php interpreter&apos;&apos;&apos;&apos; use the following:
+* goto &apos;&apos;&apos;&apos;Use this interpreter&apos;&apos;&apos;&apos; browse to
  /applications/joomla-3.4.3-1/php/bin/php
 
-* Under the label ''''Default composer interpreter'''' browse to
+* Under the label &apos;&apos;&apos;&apos;Default composer interpreter&apos;&apos;&apos;&apos; browse to
  /applications/joomla-3.4.3-1/php/bin/php 
 
-* Under the label ''''Path to alternative PHP configuration file'''' browse to
+* Under the label &apos;&apos;&apos;&apos;Path to alternative PHP configuration file&apos;&apos;&apos;&apos; browse to
  /applications/joomla-3.4.3-1/php/etc/php.ini
 
 ####Listen for debugging####
-Then select in preferences -->Debugger-->Connection
+Then select in preferences --&gt;Debugger--&gt;Connection
 
-#####Debugger Connection#####
+<h4>Debugger Connection<h4>
 
 ![Setup for debugging](https://github.com/pacav69/komodo-ext-docs/img/Komododebuggingconnection.png|)
 
-Under ''''Komodo should listen for debugging connections on:'''' 
-Change option to 'a specific port:9000'
+Under &apos;&apos;&apos;&apos;Komodo should listen for debugging connections on:&apos;&apos;&apos;&apos; 
+Change option to &apos;a specific port:9000&apos;
 make sure it is set to 9000 this is what should be set in the php.ini file.
 
-Open up preferences select--> languages -->PHP
-Under the debugger Configuration you should see ''''Successfully configured for local PHP debugging.'''' If not you can click on 'Re-check Config'
+Open up preferences select--&gt; languages --&gt;PHP
+Under the debugger Configuration you should see &apos;&apos;&apos;&apos;Successfully configured for local PHP debugging.&apos;&apos;&apos;&apos; If not you can click on &apos;Re-check Config&apos;
 
 Click OK to save changes
 
-#####Debugging options#####
+<h4>Debugging options<h4>
 ![Setup for debugging](https://github.com/pacav69/komodo-ext-docs/img/KomodoDebuggingoptions.png|)
 
-Under the debug menu select 'Step In' this will open up a new window titled ''''Debugging Options''''.
-Create a new configuration name it ''''joomlaphp'''' click ok
+Under the debug menu select &apos;Step In&apos; this will open up a new window titled &apos;&apos;&apos;&apos;Debugging Options&apos;&apos;&apos;&apos;.
+Create a new configuration name it &apos;&apos;&apos;&apos;joomlaphp&apos;&apos;&apos;&apos; click ok
 
-* In '''Language''' enter in PHP
+* In &apos;&apos;&apos;Language&apos;&apos;&apos; enter in PHP
 
-* In '''Interpreter Arguments''' click on the arrow to the right of the area 
-select ''''look for php.ini file in this directory''''.
+* In &apos;&apos;&apos;Interpreter Arguments&apos;&apos;&apos; click on the arrow to the right of the area 
+select &apos;&apos;&apos;&apos;look for php.ini file in this directory&apos;&apos;&apos;&apos;.
 browse to /Applications/joomla-3.4.3-1/php/etc
-it will then display '-c /Applications/joomla-3.4.3-1/php/etc'
+it will then display &apos;-c /Applications/joomla-3.4.3-1/php/etc&apos;
 
-* In '''Script''' browse to 
+* In &apos;&apos;&apos;Script&apos;&apos;&apos; browse to 
 /Applications/joomla-3.4.3-1/apps/joomla/htdocs/index.php
 
-* In '''Directory''' browse to 
+* In &apos;&apos;&apos;Directory&apos;&apos;&apos; browse to 
 /Applications/joomla-3.4.3-1/apps/joomla/htdocs
 
-Under the label ''''Select the interpreter to use for debugging select option'''' - ''''Use the CGI interpreter (php-cgi or php)''''.
+Under the label &apos;&apos;&apos;&apos;Select the interpreter to use for debugging select option&apos;&apos;&apos;&apos; - &apos;&apos;&apos;&apos;Use the CGI interpreter (php-cgi or php)&apos;&apos;&apos;&apos;.
 
 When ok is click it will start to run and open up the index.php and stop at the first entry point.
 From there you can go/continue, step in, step over, and step out.
