@@ -26,7 +26,7 @@ On a MAC using MAMP
 * Goto /applications/joomla-3.4.3-1/php/etc/php.ini
 * open up this file with your favourite text editor
 * do a search for xdebug you should find something like this:
-<code>
+
         ;[XDebug]
         ;; Only Zend OR (!) XDebug
         ;zend_extension="/Applications/mampstack-5.5.27-0/php/lib/php/extensions/xdebug.so"
@@ -36,7 +36,7 @@ On a MAC using MAMP
         ;xdebug.remote_handler=dbgp
         ;xdebug.profiler_enable=1
         ;xdebug.profiler_output_dir=/tmp
-</code>
+
 Delete the ; in front of the text under ';; Only Zend OR (!) XDebug' so it reads like this:
 
         ;[XDebug]
