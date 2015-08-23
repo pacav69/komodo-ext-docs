@@ -62,6 +62,7 @@ location of schemes
 location of extensions
 /Users/silvermac/Library/Application Support/KomodoIDE/9.2/XRE/extensions
 
+use html tools for html editing
 
 
 
