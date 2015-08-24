@@ -8,9 +8,13 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #606c71; }
-
+/*
 #top-menu, #footer {
     background: #42a2ce;
+}
+*/
+#top-menu, #footer {
+    background: #159957;
 }
 
 
