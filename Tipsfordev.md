@@ -66,6 +66,8 @@ use html tools for html editing
 
 https://stackedit.io
 
+http://purecss.io/layouts/
+
 
 
 

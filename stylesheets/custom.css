@@ -1,0 +1,78 @@
+body {
+margin-top: 30px
+}
+#top-menu, #footer {
+background: #42a2ce;
+}
+
+#footer{
+padding: 2%;
+color: #FFFFFF;
+}
+
+#footer h3{
+margin-left: 35px;
+}
+
+#footer ul {
+list-style: none;
+}
+
+#footer ul a{
+text-decoration: none;
+color: #260887;
+}
+
+#footer li {
+margin-bottom: 8px;
+}
+
+#top-menu a, #footer a{
+color: #ffffff;
+}
+
+#top-menu a:hover{
+color: #030663;
+}
+
+.pure-u-1.leaderboard {
+background: #4b6c9c;
+color: #FFFFFF;
+}
+
+.brand {
+padding: 20px;
+}
+
+.call-to-action {
+    background: #ec8007;
+    color: #fff;
+ }
+
+.call-to-action_two {
+    background: #5f6cda;
+    color: #fff;
+}
+
+.header-next h1, .header-next h3{
+text-align: center
+}
+
+.content.pure-u-1.support {
+background-color:#f6f3eb;
+border-top: 1px #b6ae8f solid;
+border-bottom: 1px #b6ae8f solid;
+}
+
+.content.pure-u-1.guarranty {
+background-color: #000000;
+color: #FFFFFF;
+}
+
+.brand > table {
+margin-bottom: 20px;
+}
+
+.pure-form label{
+color:#FFFFFF;
+}

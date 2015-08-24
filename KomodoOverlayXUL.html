@@ -6,19 +6,40 @@
 		<title>Komodo Overlay XUL</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<!--		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
+
 		<!--<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />-->
 		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+		<script type="text/javascript" src="js/uimenu.js"></script>
+		<div class="custom-menu-wrapper">
+			<div class="custom-wrapper pure-g" id="top-menu">
+				<div class="pure-u-1 pure-u-md-1-3">
+					<div class="pure-menu pure-menu-horizontal custom-can-transform">
+						<ul class="pure-menu-list">
+							<li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a>
+							</li>
+							<li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a>
+							</li>
+							<li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 	</head>
+	
 	<body>
 		<section class="page-header">
 			<div class="container">
-				<h2 id="komodo-overlay-xul">Komodo Overlay XUL</h2>
+					<h2 id="komodo-overlay-xul">Komodo Overlay XUL</h2>
 
 		</section>
-		<section class="main-content">
+		
+<section class="main-content">
 			
 <h1 id="files-in-root">Files in root</h1>
 
@@ -33,24 +54,25 @@
 <h3 id="komodooverlayxul">komodoOverlay.xul</h3>
 
 			<p>contains list of menu selections</p>
-<pre><code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-</code></pre>
+					<pre><code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+					</code></pre>
 
 			<ul>
 				<li>Location of language file used with xul</li>
 			</ul>
 			<p><code></code>
+
 			</p>
-<pre><code>&lt;!DOCTYPE overlay SYSTEM  "chrome://{extension_name}/locale/{extlanguagefile}.dtd"&gt;
-</code></pre>
+					<pre><code>&lt;!DOCTYPE overlay SYSTEM  "chrome://{extension_name}/locale/{extlanguagefile}.dtd"&gt;
+					</code></pre>
 
 			<p></p>
 			<ul>
 				<li>location of stylesheets</li>
 			</ul>
-<pre><code>&lt;?xml-stylesheet href="chrome://{extension_name}/skin/komodoOverlay.css" type="text/css" ?&gt;
-&lt;?xml-stylesheet href="chrome://{extension_name}/skin/hyperlink/cssImagePreview.css" type="text/css" ?&gt;
-</code></pre>
+						<pre><code>&lt;?xml-stylesheet href="chrome://{extension_name}/skin/komodoOverlay.css" type="text/css" ?&gt;
+						&lt;?xml-stylesheet href="chrome://{extension_name}/skin/hyperlink/cssImagePreview.css" type="text/css" ?&gt;
+						</code></pre>
 
 			<p></p>
 			<ul>
@@ -62,10 +84,10 @@
 			<ul>
 				<li>scripts used in xul</li>
 			</ul>
-<pre><code>&lt;script type="application/x-javascript;version=1.7" src="chrome://komodo/content/library/encodingmenu.js" /&gt;
-&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/{extension_nameExtProject.js" /&gt;
-&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/scripts/statusbar.js" /&gt;
-</code></pre>
+					<pre><code>&lt;script type="application/x-javascript;version=1.7" src="chrome://komodo/content/library/encodingmenu.js" /&gt;
+					&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/{extension_nameExtProject.js" /&gt;
+					&lt;script type="application/x-javascript"             src="chrome://{extension_name}/content/scripts/statusbar.js" /&gt;
+					</code></pre>
 
 			<ul>
 				<li>menubar</li>
