@@ -331,7 +331,7 @@ a {
     }
 }
 
-/.grids-unit {
+.grids-unit {
     margin: 0.25em 0;
     padding-left: 4.5em;
 }
@@ -375,19 +375,3 @@ a {
 #pure-menu-link{
   color: #ffffff;
 }
-
-/*.pure-menu-link{
-  color: #ffffff;
-}
-*/
-
-#top-menu a, #footer a {
-    color: #ffffff;
-}
-
-/*
-.custom-menu .pure-menu-list,
-.custom-menu .pure-menu-heading {
-    color: #EFDEDE;
-}
-*/
